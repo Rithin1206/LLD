@@ -152,8 +152,9 @@ class Game{
             try{
                 board->makeMove(move);    
             }
-            catch(exception e){
-                cerr<<" error making move "<<e.what()<<endl;
+            catch(exception& e){
+                cerr<<" error making move: "<<e.what()<<endl;
+                return ;
             }
             board->print();
         }
